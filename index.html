@@ -150,9 +150,13 @@
         }
 
         function showCongratulations() {
+         
             statusDiv.classList.add("hidden");
             congratulationsDiv.classList.remove("hidden");
             startTimer();
+            setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }, 100);
         }
 
         function startTimer() {
