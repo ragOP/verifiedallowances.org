@@ -103,7 +103,7 @@
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
-                window.scrollTo({ top: 630, behavior: 'smooth' });
+                smoothScrollToTop(1000,632);
             } else {
                 stepProcess("yes");
             }
@@ -114,7 +114,7 @@
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
-                window.scrollTo({ top: 630, behavior: 'smooth' });
+                smoothScrollToTop(1000,632);
             } else {
                 stepProcess("no");
             }
@@ -127,8 +127,37 @@
             `;
         }
 
+        function smoothScrollToTop(duration, targetPosition = 0) {
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  function animation(currentTime) {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  }
+
+  function ease(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  }
+
+  requestAnimationFrame(animation);
+}
+
+
+
+
+
+
+
         const stepProcess = (answer) => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            smoothScrollToTop(1000);
             const mainContent = document.getElementById("mainContent");
             mainContent.classList.add("hidden");
             statusDiv.classList.remove("hidden");
