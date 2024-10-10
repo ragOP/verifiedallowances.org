@@ -15,7 +15,7 @@
 <body>
     <div>
         <div style="margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;" class="top-sticky-blue-test2" id="top">
-           <img src="logo.png" alt="pic" style="height: 74%; max-width: 74%;"/>
+            Senior's Allowance Program 2024
         </div>
 
         <!-- Step messages will be displayed here when needed -->
@@ -28,27 +28,25 @@
             <div class="main-descrition-5-5">
                 <div class="main-des-title-6-7" >
                     <b> 
-                        Medicare Beneficiaries May Be Eligible For New Benefits. Click Below To Check Eligibility.
+                        Americans Over 65 Can Now Qualify For The $900 Food Allowance Card Under 2024 Medicare Policy!
                     </b>
                 </div>
-                <img class="topic-img-middle-z" src="./main.jpg" alt="head" />
+                <img class="topic-img-middle-z" src="./card.png" alt="head" />
                 <div style="margin-top: 14px;" class="main-des-5">
-                   <b> How it works:</b> Complete this survey to check your eligibility.
+                    Americans over 65 years old can claim the 2024 Food Allowance Card that gives them up to $900. Americans can use the funds to fully cover their Food, Prescriptions at Walmart, and thousands of other participating stores!
                 </div>
-                <!-- <div class="main-des-5" style="margin-top: -5px;">
+                <div class="main-des-5" style="margin-top: -5px;">
                     If you have not yet claimed your monthly allowance, then answer the questions below and once approved <b>you will have your $900 Food Allowance mailed to you within a few days ready for use!</b>
-                </div> -->
+                </div>
             </div>
 
             <div class="survey">
                 <div class="quiz-5" id="btn">
-                    <span id="quizQuestion">Select Your Age:</span>
+                    <span id="quizQuestion">Are you over the age of 64?</span>
                 </div>
                 <div class="answer" id="answerOptions">
-                    <div class="answer-btn-5" onclick="handleQuizP()">Under 55</div>
-                    <div class="answer-btn-5" onclick="handleQuizN()">55-64</div>
-                    <div class="answer-btn-5" onclick="handleQuizN()">65-74</div>
-                    <div class="answer-btn-5" onclick="handleQuizN()">75+</div>
+                    <div class="answer-btn-5" onclick="handleQuizP()">YES, I'M 65 OR OLDER</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">NO, I'M 64 OR YOUNGER</div>
                 </div>
             </div>
         </div>
@@ -91,7 +89,7 @@
 
     <script>
         let step = "process";
-        let quizQuestion = "Select Your Age:";
+        let quizQuestion = "Are you over the age of 64?";
         const statusDiv = document.getElementById("status");
         const statusMessage = document.getElementById("statusMessage");
         const congratulationsDiv = document.getElementById("congratulations");
@@ -101,8 +99,8 @@
         const secondsEl = document.getElementById("seconds");
 
         function handleQuizP() {
-            if (quizQuestion === "Select Your Age:") {
-                quizQuestion = "Are you on Medicare Parts A & B?";
+            if (quizQuestion === "Are you over the age of 64?") {
+                quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000,632);
@@ -112,8 +110,8 @@
         }
 
         function handleQuizN() {
-            if (quizQuestion === "Select Your Age:") {
-                quizQuestion = "Are you on Medicare Parts A & B?";
+            if (quizQuestion === "Are you over the age of 64?") {
+                quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000,632);
@@ -126,7 +124,6 @@
             answerOptions.innerHTML = `
                 <div class="answer-btn-5" onclick="stepProcess('yes')">YES</div>
                 <div class="answer-btn-5" onclick="stepProcess('no')">NO</div>
-                 <div class="answer-btn-5" onclick="stepProcess('no')">SKIP</div>
             `;
         }
 
