@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 a{
     text-decoration: none;
     color: inherit;
@@ -330,6 +333,10 @@ a{
     line-height: 2.25rem;
     font-weight: 700;
     color: #1f2937;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
   }
   .quiz-5-test{
     font-size: 1.999rem;
@@ -561,6 +568,7 @@ a{
   .call-btn a {
     color: white; /* Ensure the text is white */
     text-decoration: none; /* Remove underline */
+  
   }
   
   .call-btn:hover{
@@ -787,5 +795,5 @@ a{
   .call-btn {
   -webkit-animation: glow 1.5s infinite alternate;
   animation: glow 1.5s infinite alternate;
-  height:70px;
+ 
   }
