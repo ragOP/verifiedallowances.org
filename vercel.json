@@ -1,12 +1,14 @@
 {
-    "rewrites": [
-      {
-        "source": "/",
-        "destination": "/first.html"
-      },
+    "redirects": [
       {
         "source": "/engmed-tsf",
-        "destination": "/index.html"
+        "destination": "/index.html",
+        "permanent": true
+      },
+      {
+        "source": "/",
+        "destination": "/first.html",
+        "permanent": true
       }
     ]
   }
