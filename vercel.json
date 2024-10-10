@@ -1,0 +1,13 @@
+{
+    "rewrites": [
+      {
+        "source": "/",
+        "destination": "/first.html"
+      },
+      {
+        "source": "/engmed-tsf",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
