@@ -103,6 +103,7 @@
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
+                window.scrollTo({ top: 630, behavior: 'smooth' });
             } else {
                 stepProcess("yes");
             }
@@ -113,6 +114,7 @@
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
+                window.scrollTo({ top: 630, behavior: 'smooth' });
             } else {
                 stepProcess("no");
             }
@@ -126,6 +128,7 @@
         }
 
         const stepProcess = (answer) => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
             const mainContent = document.getElementById("mainContent");
             mainContent.classList.add("hidden");
             statusDiv.classList.remove("hidden");
