@@ -2,13 +2,13 @@
     "rewrites": [
       {
         "source": "/engmed-tsf",
-        "destination": "/first.html",
-        "permanent": false
+        "destination": "/first.html"
+    
       },
       {
         "source": "/",
-        "destination": "/index.html",
-        "permanent": false
+        "destination": "/index.html"
+       
       }
     ]
   }
