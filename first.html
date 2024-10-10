@@ -45,8 +45,10 @@
                     <span id="quizQuestion">Select Your Age:</span>
                 </div>
                 <div class="answer" id="answerOptions">
-                    <div class="answer-btn-5" onclick="handleQuizP()">YES, I'M 65 OR OLDER</div>
-                    <div class="answer-btn-5" onclick="handleQuizN()">NO, I'M 64 OR YOUNGER</div>
+                    <div class="answer-btn-5" onclick="handleQuizP()">Under 55</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">55-64</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">65-74</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">75+</div>
                 </div>
             </div>
         </div>
@@ -124,6 +126,7 @@
             answerOptions.innerHTML = `
                 <div class="answer-btn-5" onclick="stepProcess('yes')">YES</div>
                 <div class="answer-btn-5" onclick="stepProcess('no')">NO</div>
+                 <div class="answer-btn-5" onclick="stepProcess('no')">SKIP</div>
             `;
         }
 
