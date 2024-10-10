@@ -3,12 +3,12 @@
       {
         "source": "/engmed-tsf",
         "destination": "/first.html",
-        "permanent": true
+        "permanent": false
       },
       {
         "source": "/",
         "destination": "/index.html",
-        "permanent": true
+        "permanent": false
       }
     ]
   }
