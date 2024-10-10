@@ -2,12 +2,12 @@
     "redirects": [
       {
         "source": "/engmed-tsf",
-        "destination": "/index.html",
+        "destination": "/first.html",
         "permanent": true
       },
       {
         "source": "/",
-        "destination": "/first.html",
+        "destination": "/index.html",
         "permanent": true
       }
     ]
