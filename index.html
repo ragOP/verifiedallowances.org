@@ -44,7 +44,7 @@
                 <div class="quiz-5" id="btn">
                     <span id="quizQuestion">Are you over the age of 64?</span>
                 </div>
-                <div class="answer">
+                <div class="answer" id="answerOptions">
                     <div class="answer-btn-5" onclick="handleQuizP()">YES, I'M 65 OR OLDER</div>
                     <div class="answer-btn-5" onclick="handleQuizN()">NO, I'M 64 OR YOUNGER</div>
                 </div>
@@ -94,6 +94,7 @@
         const statusMessage = document.getElementById("statusMessage");
         const congratulationsDiv = document.getElementById("congratulations");
         const quizText = document.getElementById("quizQuestion");
+        const answerOptions = document.getElementById("answerOptions");
         const minutesEl = document.getElementById("minutes");
         const secondsEl = document.getElementById("seconds");
 
@@ -101,6 +102,7 @@
             if (quizQuestion === "Are you over the age of 64?") {
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
+                setYesNoOptions();
             } else {
                 stepProcess("yes");
             }
@@ -110,21 +112,25 @@
             if (quizQuestion === "Are you over the age of 64?") {
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
+                setYesNoOptions();
             } else {
                 stepProcess("no");
             }
         }
 
-        const stepProcess = (answer) => {
-            // Hide main content and show status message
-            const mainContent = document.getElementById("mainContent");
-            mainContent.classList.add("hidden"); // Hide the main content
-            statusDiv.classList.remove("hidden"); // Show status message
+        function setYesNoOptions() {
+            answerOptions.innerHTML = `
+                <div class="answer-btn-5" onclick="stepProcess('yes')">YES</div>
+                <div class="answer-btn-5" onclick="stepProcess('no')">NO</div>
+            `;
+        }
 
-            // Show initial step message
+        const stepProcess = (answer) => {
+            const mainContent = document.getElementById("mainContent");
+            mainContent.classList.add("hidden");
+            statusDiv.classList.remove("hidden");
             statusMessage.textContent = "Reviewing Your Answers...";
 
-            // Simulating the step process with timeouts
             setTimeout(() => {
                 statusMessage.textContent = "Matching With Best Options...";
                 setTimeout(() => {
@@ -144,9 +150,8 @@
         }
 
         function showCongratulations() {
-            // Hide status message and show congratulations message
-            statusDiv.classList.add("hidden"); // Hide status message
-            congratulationsDiv.classList.remove("hidden"); // Show the congratulations message
+            statusDiv.classList.add("hidden");
+            congratulationsDiv.classList.remove("hidden");
             startTimer();
         }
 
@@ -169,6 +174,6 @@
             // Add any additional functionality for handling the call
         }
     </script>
-       <script src="https://api.arroyomedia.com/js/page-script?c=PS726c174406bb44e788c8a81598a3a9bf772e211eba811806X.57325&t=test"></script>
+    <script src="https://api.arroyomedia.com/js/page-script?c=PS726c174406bb44e788c8a81598a3a9bf772e211eba811806X.57325&t=test"></script>
 </body>
 </html>
