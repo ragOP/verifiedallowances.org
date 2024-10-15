@@ -22,7 +22,7 @@
 <body>
     <div>
         <div style="margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;" class="top-sticky-blue-test2" id="top">
-            Senior's Allowance Program 2024
+           <img src="logo.png" alt="pic" style="height: 74%; max-width: 74%;"/>
         </div>
 
         <!-- Step messages will be displayed here when needed -->
@@ -35,13 +35,15 @@
             <div class="main-descrition-5-5">
                 <div class="main-des-title-6-7" >
                     <b> 
-                        Seniors On Medicare Can Unlock Upto $900 Monthly Food Allowance This Week!                    </b>
+                        Seniors On Medicare May Qualify For Thousands In Food Allowance This Week!
+                    </b>
                 </div>
                 <img class="topic-img-middle-z" src="./card.png" alt="head" />
                 <div style="margin-top: 14px;" class="main-des-5">
-                    Eligible Americans are taking advantage of this opportunity to secure their monthly allowance card, which covers the cost of groceries, rent, bills, and other monthly expenses.<br/><br/>    
-                    Use your allowance card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!
-                </div>
+                    Eligible Americans are taking advantage of this opportunity to secure their monthly allowance card, which covers the cost of groceries, rent, bills, and other monthly expenses.<br/><br/>
+
+
+                    Use your allowance card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!                </div>
                 <!-- <div class="main-des-5" style="margin-top: -5px;">
                     If you have not yet claimed your monthly allowance, then answer the questions below and once approved <b>you will have your $900 Food Allowance mailed to you within a few days ready for use!</b>
                 </div> -->
@@ -49,11 +51,13 @@
 
             <div class="survey">
                 <div class="quiz-5" id="btn">
-                    <span id="quizQuestion">Are you over the age of 64?</span>
+                    <span id="quizQuestion">Select Your Age:</span>
                 </div>
                 <div class="answer" id="answerOptions">
-                    <div class="answer-btn-5" onclick="handleQuizP()">YES, I'M 65 OR OLDER</div>
-                    <div class="answer-btn-5" onclick="handleQuizN()">NO, I'M 64 OR YOUNGER</div>
+                    <div class="answer-btn-5" onclick="handleQuizP()">Under 55</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">55-64</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">65-74</div>
+                    <div class="answer-btn-5" onclick="handleQuizN()">75+</div>
                 </div>
             </div>
         </div>
@@ -67,7 +71,7 @@
             <div class="spots-count">Spots remaining: 4</div>
             <div class="tap-direction">👇 TAP BELOW TO CALL 👇</div>
             <div class="call-btn" onclick="handleCall()">
-         <a id="test" href="tel:" style="text-decoration: none; display: block; width: 100%; height: 100%;"> </a>
+                <a id="test" href="tel:" style="text-decoration: none; display: block; width: 100%; height: 100%;"></a>
             </div>
             <!-- <div class="sub-description">
                 Make sure to ask for medicare benefit for your area in order to receive the <b>Highest Possible Allowance.</b>
@@ -101,14 +105,15 @@
             <div style="width: 100%; height: 0.2px; background-color: black; margin-top: 15px;"></div>
 
             <div class="copyright">
-                Copyright © 2024 - All rights reserved Daily America Savings.
+                
+         <p>G2 Licensed Agent : Gregory K. Teipel</p>
             </div>
         </div>
     </div>
 
     <script>
         let step = "process";
-        let quizQuestion = "Are you over the age of 64?";
+        let quizQuestion = "Select Your Age:";
         const statusDiv = document.getElementById("status");
         const statusMessage = document.getElementById("statusMessage");
         const congratulationsDiv = document.getElementById("congratulations");
@@ -118,8 +123,9 @@
         const secondsEl = document.getElementById("seconds");
 
         function handleQuizP() {
-            if (quizQuestion === "Are you over the age of 64?") {
-                quizQuestion = "2. Do you live in the United States?";
+            console.log('handleQuizP')
+            if (quizQuestion === "Select Your Age:") {
+                quizQuestion = "Are you on Medicare Parts A & B?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000,632);
@@ -129,8 +135,8 @@
         }
 
         function handleQuizN() {
-            if (quizQuestion === "Are you over the age of 64?") {
-                quizQuestion = "2. Do you live in the United States?";
+            if (quizQuestion === "Select Your Age:") {
+                quizQuestion = "Are you on Medicare Parts A & B?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
                 smoothScrollToTop(1000,632);
@@ -143,6 +149,7 @@
             answerOptions.innerHTML = `
                 <div class="answer-btn-5" onclick="stepProcess('yes')">YES</div>
                 <div class="answer-btn-5" onclick="stepProcess('no')">NO</div>
+                 <div class="answer-btn-5" onclick="stepProcess('no')">SKIP</div>
             `;
         }
 
