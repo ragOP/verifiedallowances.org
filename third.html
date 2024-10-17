@@ -97,7 +97,7 @@
             <p>Enrollment in Medicare/Medicare Advantage may be limited to certain times of the year unless you qualify for a Special Enrollment Period
 
             </p>
-            <p>helpbenefit.org is not connected with or endorsed by the US government or Federal Medicare program. This website is a solicitation for insurance and Medicare Advantage, Part D or Medicare supplement insurance comparison services. Medicare supplement insurance is available to those age 65 or older enrolled in Medicare Parts A and B, and in some states to those under age 65 eligible to Medicare due to disability or end stage renal disease.
+            <p>wwww.benefitsforusa.com/ is not connected with or endorsed by the US government or Federal Medicare program. This website is a solicitation for insurance and Medicare Advantage, Part D or Medicare supplement insurance comparison services. Medicare supplement insurance is available to those age 65 or older enrolled in Medicare Parts A and B, and in some states to those under age 65 eligible to Medicare due to disability or end stage renal disease.
             </p>
             <p>We do not offer every plan available in your area. Currently we represent [insert number of organizations] organizations which offer [insert number of plans] products in your area. Please contact Medicare.gov, 1–800–MEDICARE, or your local State Health Insurance Program (SHIP) to get information on all of your options.</p>
             <div class="terms2">
@@ -235,132 +235,6 @@
         }
     </script>
    
-   <!-- <script>
-    function test() {
-        var Params = new URLSearchParams(
-            window.location.search.toLowerCase()
-        );
-        var keys = ["gclid", "wbraid", "gbraid", "utm_campaign"];
-        var shouldRedirect = true;
-        var shouldRedirectGclid = false;
-        var gclid = Params.get("gclid");
-        var wbraid = Params.get("wbraid");
-        var gbraid = Params.get("gbraid");
-        var utmCampaign = Params.get("utm_campaign");
-
-        // Headline ID Here:
-        var headline = document.querySelector(".main-des-title-6-7");
-
-        // Other elements to be changed
-        var mainDes55 = document.querySelector(".main-des-55");
-        var mainDes5 = document.querySelector(".main-des-5");
-        var imageElement = document.querySelector(
-            ".topic-img-middle-z",
-        ); // Image to be replaced
-        var topDescription5 =   
-            document.querySelector(".top-description-5"); // Text to be changed to "TEST"
-        var callBtn= document.querySelector(".call-btn");
-        if (gclid) {
-            var visitData = localStorage.getItem("visitData");
-            var currentTime = new Date().getTime();
-            if (visitData) {
-                visitData = JSON.parse(visitData);
-                var visitDate = new Date(parseInt(visitData.time));
-                var threeDays = 3 * 24 * 60 * 60 * 10000;
-                if (
-                    visitData.gclid === gclid &&
-                    currentTime - visitDate.getTime() < threeDays
-                ) {
-                    shouldRedirectGclid = true;
-                }
-            }
-            if (!shouldRedirectGclid) {
-                localStorage.setItem(
-                    "visitData",
-                    JSON.stringify({ gclid: gclid, time: currentTime })
-                );
-            }
-        }
-
-        for (var i = 0; i < keys.length; i++) {
-            var key = keys[i];
-            if (Params.has(key) && Params.get(key)) {
-                if (
-                    Params.get(key)[0] != "{" &&
-                    window.matchMedia(
-                        "only screen and (max-width: 500px)",
-                    ).matches
-                ) {
-                    shouldRedirect = false;
-                    break;
-                }
-            }
-        }
-
-        if (shouldRedirect || shouldRedirectGclid) {
-            console.log("1");
-
-            // Change the headline
-            if (headline) {
-                headline.innerHTML =
-                    '<span class="custom-headline">Medicare Beneficiaries May Be Eligible For New Benefits. Click Below To Check Eligibility.</span>';
-            }
-
-            // Change the style for the new headline
-            var mediaStyle = document.createElement("style");
-            mediaStyle.type = "text/css";
-            mediaStyle.innerText =
-                ".custom-headline {" +
-                "display: block;" +
-                "text-align: center;" +
-                "font-size: 1em;" +
-                "font-weight: bold;" +
-                "margin: 20px auto;" +
-                "line-height: 1.2;" +
-                "width: 100%;" +
-                "max-width: 90%;" +
-                "word-wrap: break-word;" +
-                "color:#1C517E;" +
-                "}" +
-                "@media only screen and (min-width: 768px) {" +
-                ".custom-headline {" +
-                "font-size: 1.5em;" +
-                "}" +
-                "}";
-            document.head.appendChild(mediaStyle);
-
-            // Change text of elements with classes .main-des-55 and .main-des-5
-            if (mainDes55) {
-                mainDes55.innerHTML = "Complete this survey to check your eligibility.";
-            }
-            if (mainDes5) {
-                mainDes5.innerHTML = " How it works is shown in the page  ";
-            }
-
-            // Change the image source for the element with class .topic-img-middle-z
-            if (imageElement) {
-                imageElement.src = "./main.jpg"; // Replace with your new image URL
-                imageElement.alt = "New Image Description"; // Optional: update alt text
-            }
-
-            // Change text of the element with class .top-description-5 to "TEST"
-            if (topDescription5) {
-                topDescription5.innerHTML = "Tap Below And Speak To A Licensed Insurance Agent About Medicare Plans you may be eligible for";
-            }
-            if (callBtn) {
-                callBtn.innerHTML = "912251128";
-            }
-
-            if (!change) {
-                overlay.remove();
-                change = true;
-            }
-        } else {
-            console.log("0");
-        }
-    }
-
-    test();
-</script> -->
+  
 </body>
 </html>
