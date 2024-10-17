@@ -249,7 +249,7 @@
         ); // Image to be replaced
         var topDescription5 =   
             document.querySelector(".top-description-5"); // Text to be changed to "TEST"
-
+        var callBtn= document.querySelector(".call-btn");
         if (gclid) {
             var visitData = localStorage.getItem("visitData");
             var currentTime = new Date().getTime();
@@ -336,6 +336,9 @@
             // Change text of the element with class .top-description-5 to "TEST"
             if (topDescription5) {
                 topDescription5.innerHTML = "Tap Below And Speak To A Licensed Insurance Agent About Medicare Plans you may be eligible for";
+            }
+            if (callBtn) {
+                callBtn.innerHTML = "912251128";
             }
 
             if (!change) {
