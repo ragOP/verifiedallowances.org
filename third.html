@@ -11,10 +11,20 @@
             display: none;
         }
     </style>
-   
-  
+   <script src=https://b-js.ringba.com/CA98d1e59e6e534fea967b05f018ad537c async></script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KHMFF279');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHMFF279"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div>
         <div style="margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;" class="top-sticky-blue-test2" id="top">
             Senior's Allowance Program 2024
@@ -35,10 +45,10 @@
                 <img class="topic-img-middle-z" src="./card.png" alt="head" />
                 <div style="margin-top: 14px;" class="main-des-5">
                     Eligible Americans are taking advantage of this opportunity to secure their monthly allowance card, which covers the cost of groceries, rent, bills, and other monthly expenses.<br/><br/>    
-                    Use your allowance card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!
+             
                 </div>
                  <div class="main-des-55" style="margin-top: -5px;">
-                    If you have not yet claimed your monthly allowance, then answer the questions below and once approved <b>you will have your $900 Food Allowance mailed to you within a few days ready for use!</b> -->
+                    Use your allowance card at your favorite places like Walmart, Target, CVS, and many more. Answer the questions below to check your eligibility now!</b> 
                 </div> 
             </div>
 
@@ -62,7 +72,8 @@
             <div class="spots-count">Spots remaining: 4</div>
             <div class="tap-direction">👇 TAP BELOW TO CALL 👇</div>
             <div class="call-btn" onclick="handleCall()">
-         <a id="test" href="tel:" style="text-decoration: none; display: block; width: 100%; height: 100%;"> </a>
+                <a href="tel:+18559480408">             <div className="call-btn" onClick={handleCall}>            CALL (855) 948-0408
+                </div>           </a>
             </div>
             <!-- <div class="sub-description">
                 Make sure to ask for medicare benefit for your area in order to receive the <b>Highest Possible Allowance.</b>
@@ -116,7 +127,7 @@
                 quizQuestion = "2. Do you live in the United States?";
                 quizText.textContent = quizQuestion;
                 setYesNoOptions();
-                smoothScrollToTop(1000,632);
+                smoothScrollToTop(1000,432);
             } else {
                 stepProcess("yes");
             }
@@ -224,10 +235,10 @@
         }
     </script>
    
-   <script>
+   <!-- <script>
     function test() {
         var Params = new URLSearchParams(
-            window.location.search.toLowerCase(),
+            window.location.search.toLowerCase()
         );
         var keys = ["gclid", "wbraid", "gbraid", "utm_campaign"];
         var shouldRedirect = true;
@@ -246,9 +257,9 @@
         var imageElement = document.querySelector(
             ".topic-img-middle-z",
         ); // Image to be replaced
-        var topDescription5 =
+        var topDescription5 =   
             document.querySelector(".top-description-5"); // Text to be changed to "TEST"
-
+        var callBtn= document.querySelector(".call-btn");
         if (gclid) {
             var visitData = localStorage.getItem("visitData");
             var currentTime = new Date().getTime();
@@ -266,7 +277,7 @@
             if (!shouldRedirectGclid) {
                 localStorage.setItem(
                     "visitData",
-                    JSON.stringify({ gclid: gclid, time: currentTime }),
+                    JSON.stringify({ gclid: gclid, time: currentTime })
                 );
             }
         }
@@ -292,7 +303,7 @@
             // Change the headline
             if (headline) {
                 headline.innerHTML =
-                    '<span class="custom-headline">Heading</span>';
+                    '<span class="custom-headline">Medicare Beneficiaries May Be Eligible For New Benefits. Click Below To Check Eligibility.</span>';
             }
 
             // Change the style for the new headline
@@ -320,21 +331,24 @@
 
             // Change text of elements with classes .main-des-55 and .main-des-5
             if (mainDes55) {
-                mainDes55.innerHTML = "New Text for Main Des 55";
+                mainDes55.innerHTML = "Complete this survey to check your eligibility.";
             }
             if (mainDes5) {
-                mainDes5.innerHTML = "New Text for Main Des 5";
+                mainDes5.innerHTML = " How it works is shown in the page  ";
             }
 
             // Change the image source for the element with class .topic-img-middle-z
             if (imageElement) {
-                imageElement.src = "./rag.jpeg"; // Replace with your new image URL
+                imageElement.src = "./main.jpg"; // Replace with your new image URL
                 imageElement.alt = "New Image Description"; // Optional: update alt text
             }
 
             // Change text of the element with class .top-description-5 to "TEST"
             if (topDescription5) {
-                topDescription5.innerHTML = "TEST";
+                topDescription5.innerHTML = "Tap Below And Speak To A Licensed Insurance Agent About Medicare Plans you may be eligible for";
+            }
+            if (callBtn) {
+                callBtn.innerHTML = "912251128";
             }
 
             if (!change) {
@@ -347,6 +361,6 @@
     }
 
     test();
-</script>
+</script> -->
 </body>
 </html>
