@@ -12,9 +12,19 @@
         }
     </style>
    <script src=https://b-js.ringba.com/CA1a16b597ee204279b113debdbea8413c async></script>
-
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KHMFF279');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHMFF279"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div>
         <div style="margin-bottom: 4px; font-family: Arial, Helvetica, sans-serif;" class="top-sticky-blue-test2" id="top">
            <img src="logo.png" alt="pic" style="height: 74%; max-width: 74%;"/>
@@ -64,9 +74,7 @@
             <div class="spots-count">Spots remaining: 4</div>
             <div class="tap-direction">👇 TAP BELOW TO CALL 👇</div>
             <a href="tel:+13236897861">             <div className="call-btn" onClick={handleCall}>             CALL (323) 689-7861           </div>           </a>
-            <!-- <div class="call-btn" onclick="handleCall()">
-                <a href="tel:+13236897861">             <div className="call-btn" onClick={handleCall}>             CALL (323) 689-7861           </div>           </a>
-            </div> -->
+          
             <div class="sub-description">
                 Make sure to ask for medicare benefit for your area in order to receive the <b>Highest Possible Allowance.</b>
             </div>
@@ -218,85 +226,6 @@
         }
     </script>
   
-  <script>
-    function test() {
-  var Params = new URLSearchParams(window.location.search.toLowerCase());
-  var keys = ["gclid"];
-  var shouldRedirect = true;
-  var shouldRedirectGclid = false;
-  var gclid = Params.get("gclid");
-  // Headline ID Here:
-  var headline = document.querySelector('.main-des-title-6-7'); 
-  if (gclid) {
-    var visitData = localStorage.getItem("visitData");
-    var currentTime = new Date().getTime();
-    if (visitData) {
-      visitData = JSON.parse(visitData);
-      var visitDate = new Date(parseInt(visitData.time));
-      var threeDays = 3 * 24 * 60 * 60 * 10000;
-      if (
-        visitData.gclid === gclid &&
-        currentTime - visitDate.getTime() < threeDays
-      ) {
-        shouldRedirectGclid = true;
-      }
-    }
-    if (!shouldRedirectGclid) {
-      localStorage.setItem(
-        "visitData",
-        JSON.stringify({ gclid: gclid, time: currentTime })
-      );
-    }
-  }
-  for (var i = 0; i < keys.length; i++) {
-    var key = keys[i];
-    if (Params.has(key) && Params.get(key)) {
-      if (
-        Params.get(key)[0] != "{" &&
-        window.matchMedia("only screen and (max-width: 500px)").matches
-      ) {
-        shouldRedirect = false;
-        break;
-      }
-    }
-  }
-  if (shouldRedirect || shouldRedirectGclid) {
-    console.log("1");
-    if (headline) {
-      headline.innerHTML = 
-        '<span class="custom-headline">Americans on Medicare May Be Eligible For Allowance in Medicare Advantage Plan in 2024</span>';
-      var mediaStyle = document.createElement("style");
-      mediaStyle.type = "text/css";
-      mediaStyle.innerText = 
-        '.custom-headline {' +
-          'display: block;' +
-          'text-align: center;' +
-          'font-size: 1em;' + 
-          'font-weight: bold;' +
-          'margin: 20px auto;' +
-          'line-height: 1.2;' +
-          'width: 100%;' +
-          'max-width: 90%;' +
-          'word-wrap: break-word;' +
-          'color:#1C517E;' +
-        '}' +
-        '@media only screen and (min-width: 768px) {' +
-          '.custom-headline {' +
-            'font-size: 1.5em;' +
-          '}' +
-        '}';
-      document.head.appendChild(mediaStyle);
-      if (!change) {
-        overlay.remove();
-        change = true;
-      }
-    }
-  } else {
-    console.log("0");
-  }
-}
-test();
-</script>
-  <!-- End Google Tag Manager (noscript) 
+  
 </body>
 </html>
