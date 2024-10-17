@@ -336,6 +336,23 @@ a{
     text-align: left;
     color: #1f2937;
   }
+  .main-des-55{
+    
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+    text-align: left;
+    color: #1f2937;
+  }
+  .main-des-55-t{
+    
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 1rem 0;
+    margin-top: -3px;
+    text-align: left;
+    color: #1f2937;
+  }
   
   .main-des-2{
     color: rgb(220 38 38);
@@ -770,6 +787,12 @@ a{
       padding:0;
     }
     .main-des-5{
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-top: 1rem;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .main-des-55{
       font-size: 1rem;
       line-height: 1.5rem;
       margin-top: 1rem;
